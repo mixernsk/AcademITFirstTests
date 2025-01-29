@@ -77,4 +77,10 @@ public class BasePage {
         Select select = new Select(selectElem);
         select.selectByValue(value);
     }
+
+    public void scrollIntoView(By locator) {
+        Actions actions = new Actions(driver);
+        WebElement element = driver.findElement(locator);
+        actions.moveToElement(element).perform();
+    }
 }

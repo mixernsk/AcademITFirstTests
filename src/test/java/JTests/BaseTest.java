@@ -1,4 +1,4 @@
-package DemoQA;
+package JTests;
 /*
 Базовый класс для тестовых классов
  */
