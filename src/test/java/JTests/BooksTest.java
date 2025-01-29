@@ -3,20 +3,17 @@ package JTests;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import pages.BooksPage;
-
 /*
 Проверка кол-ва выводимых товаров в разделе Книги
  */
-public class BooksTest extends BaseTest{
+public class BooksTest extends BaseTest {
 
     @Test
     public void TestBooksPageSize() {
 
-
         int select4 = 4;
         int select8 = 8;
         BooksPage booksPage = new BooksPage(driver);
-
 
         booksPage.navigate();
         booksPage.goToBooks();
