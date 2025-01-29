@@ -4,7 +4,7 @@ package pages;
  */
 import org.openqa.selenium.By;
 
-public class Locators {
+public class FormPageLocators {
     public static final By FIRST_NAME = By.id("firstName");
     public static final By LAST_NAME = By.id("lastName");
     public static final By EMAIL = By.id("userEmail");

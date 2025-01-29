@@ -67,7 +67,6 @@ public class DemoQATest extends BaseTest {
         assertTrue(formPage.resultsTableDisplayed());
         Map<String, String> results = formPage.getResults();
 
-        System.out.println(results.get("fullName"));
         assertTrue(results.get("fullName").contains(firstName), "Name assertion error");
         assertTrue(results.get("fullName").contains(lastName), "Last name assertion error");
         assertTrue(results.get("email").contains(email), "Email assertion error");
