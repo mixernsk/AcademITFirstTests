@@ -5,9 +5,10 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.openqa.selenium.WebElement;
 import pages.BooksPage;
+
 import java.util.List;
 
-public class ParametrizedBookTest extends BaseTest{
+public class ParametrizedBookTest extends BaseTest {
 
     @ParameterizedTest
     @ValueSource(strings = {"Laptop", "Smartphone", "Fiction"})

@@ -2,6 +2,7 @@ package pages;
 /*
 Локаторы для страницы с Книгами
  */
+
 import org.openqa.selenium.By;
 
 public class BooksPageLocators {

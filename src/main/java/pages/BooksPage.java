@@ -2,6 +2,7 @@ package pages;
 /*
 Класс страницы Интернет-Магазина
  */
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -51,13 +52,13 @@ public class BooksPage extends BasePage {
         element.findElement(BooksPageLocators.CART_ADD_BUTTON).click();
     }
 
-    public void goToCart(){
+    public void goToCart() {
         this.click(BooksPageLocators.CART_LINK);
     }
 
     public List<String> getProductsFromCart() {
         List<String> productList = new ArrayList<>();
-        for (WebElement element: this.driver.findElements(BooksPageLocators.CART_PRODUCT_NAMES)) {
+        for (WebElement element : this.driver.findElements(BooksPageLocators.CART_PRODUCT_NAMES)) {
             productList.add(element.getText());
         }
         return productList;
