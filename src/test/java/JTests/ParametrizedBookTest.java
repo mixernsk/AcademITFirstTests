@@ -12,18 +12,18 @@ public class ParametrizedBookTest extends BaseTest {
 
     @ParameterizedTest
     @ValueSource(strings = {"Laptop", "Smartphone", "Fiction"})
-    public void TestSearchBooksAdded(String searchText) {
+    public void testSearchBooksAdded(String searchText) {
         BooksPage booksPage = new BooksPage(driver);
 
         booksPage.navigate();
 
         booksPage.searchProducts(searchText);
 
-        List<WebElement> foundProducts = booksPage.getSearchResults();
+        WebElement foundFirstProduct = booksPage.getSearchResults().getFirst();
 
-        var productName = booksPage.getProductName(foundProducts.getFirst());
+        var productName = booksPage.getProductName(foundFirstProduct);
 
-        booksPage.addProductToCart(foundProducts.getFirst());
+        booksPage.addProductToCart(foundFirstProduct);
 
         booksPage.goToCart();
         List<String> productsAdded = booksPage.getProductsFromCart();
